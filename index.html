@@ -256,12 +256,33 @@
       height: 100%;
       display: block;
     }
-
+    /*this is for trail*/
     #breadcrumb {
+  font-size: 14px;
   color: var(--text-color);
-  margin-right: 50%; /* Space from the theme toggle */
-  font-size: 14px; /* Adjust size as needed */
-    }
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  order: 1;
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+#breadcrumb a {
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+#breadcrumb a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+#breadcrumb span {
+  opacity: 0.6;
+}
 
     /* Circular loader with 12 thinner and larger white lines - centered */
     #loading-circular {
@@ -489,7 +510,11 @@
         <path d="M41 12 C 28,12 43,22 39,28 C 34,34 23,34 25,44 H55" />
       </svg>
     </div>
-    <div id="breadcrumb" aria-label="Breadcrumb navigation">Home / Site</div>
+    <nav id="breadcrumb">
+  <a href="/">Home</a> &rsaquo;
+  <a href="/section">Section</a> &rsaquo;
+  <span>Current Page</span>
+    </nav>
     <div id="loading-circular" aria-label="Loading animation" role="img">
       <!-- 12 thinner larger white lines -->
       <div class="line"></div>
