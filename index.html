@@ -257,6 +257,12 @@
       display: block;
     }
 
+    #breadcrumb {
+  color: var(--text-color);
+  margin-left: 20px; /* Space from the theme toggle */
+  font-size: 14px; /* Adjust size as needed */
+    }
+
     /* Circular loader with 12 thinner and larger white lines - centered */
     #loading-circular {
       position: relative;
@@ -474,6 +480,7 @@
 
   <!-- Top Bar -->
   <header id="top-bar" role="banner">
+    <div id="breadcrumb" aria-label="Breadcrumb navigation">Home > My Files</div>
     <div id="logo-ms" tabindex="0" aria-label="Brand logo MS, click to toggle theme" role="button" title="Toggle theme">
       <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" >
         <!-- M path -->
