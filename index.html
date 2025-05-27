@@ -630,6 +630,14 @@
       }
     });
 
+    //trail
+
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.getElementById("macLoader").style.display = "none";
+    }, 5000); // 5 seconds
+  });
+    
     // Plus box clickable alert placeholder
     plusBox.addEventListener('click', () => {
       alert('Plus box clicked! Add your functionality here.');
